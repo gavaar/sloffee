@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://cwu4t1x1bdlia"]
+
+[ext_resource type="Texture2D" uid="uid://cahwxlm8r8v0j" path="res://assets/sloffee/idle_deep_breath.png" id="1_xpfeh"]
+[ext_resource type="Script" uid="uid://bhyopfehe7wpk" path="res://scenes/sloffee/sloffee.gd" id="2_68hke"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80nbo"]
+atlas = ExtResource("1_xpfeh")
+region = Rect2(0, 0, 116, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2o6t"]
+atlas = ExtResource("1_xpfeh")
+region = Rect2(116, 0, 116, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_feb5d"]
+atlas = ExtResource("1_xpfeh")
+region = Rect2(232, 0, 116, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc0e3"]
+atlas = ExtResource("1_xpfeh")
+region = Rect2(348, 0, 116, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jktm"]
+atlas = ExtResource("1_xpfeh")
+region = Rect2(464, 0, 116, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryrav"]
+atlas = ExtResource("1_xpfeh")
+region = Rect2(580, 0, 116, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eow3j"]
+atlas = ExtResource("1_xpfeh")
+region = Rect2(696, 0, 116, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5wjh"]
+atlas = ExtResource("1_xpfeh")
+region = Rect2(812, 0, 116, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vef74"]
+atlas = ExtResource("1_xpfeh")
+region = Rect2(928, 0, 116, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hve3p"]
+atlas = ExtResource("1_xpfeh")
+region = Rect2(928, 0, 116, 116)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfdv2"]
+atlas = ExtResource("1_xpfeh")
+region = Rect2(812, 0, 116, 116)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hve3p"]
+animations = [{
+"frames": [{
+"duration": 16.0,
+"texture": SubResource("AtlasTexture_80nbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2o6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feb5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fc0e3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jktm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryrav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eow3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5wjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vef74")
+}],
+"loop": false,
+"name": &"deep_breath",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 21.0,
+"texture": SubResource("AtlasTexture_hve3p")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_mfdv2")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 24.0
+}]
+
+[node name="sloffee" type="AnimatedSprite2D" unique_id=1246644334]
+sprite_frames = SubResource("SpriteFrames_hve3p")
+animation = &"idle"
+autoplay = "idle"
+script = ExtResource("2_68hke")

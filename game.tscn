@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d4cd4vwim8iwp"]
+
+[ext_resource type="PackedScene" uid="uid://cwu4t1x1bdlia" path="res://scenes/sloffee/sloffee.tscn" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://bbwyssa3veni0" path="res://assets/bg.png" id="1_e2o6t"]
+
+[node name="game" type="Node2D" unique_id=21896710]
+
+[node name="background" type="Sprite2D" parent="." unique_id=478356802]
+position = Vector2(174.00002, 320.00003)
+scale = Vector2(0.63, 0.63)
+texture = ExtResource("1_e2o6t")
+
+[node name="sloffee" parent="." unique_id=1246644334 instance=ExtResource("1_80nbo")]
+position = Vector2(178, 436.00003)
+scale = Vector2(4.5, 4.5)
