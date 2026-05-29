@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://duhqmxgak4duo"]
+
+[node name="login" type="Node2D" unique_id=724414749]
+position = Vector2(3, 135)
+
+[node name="username_input" type="LineEdit" parent="." unique_id=311398792]
+offset_left = 44.0
+offset_top = 44.0
+offset_right = 322.0
+offset_bottom = 75.0
+size_flags_vertical = 4
+placeholder_text = "username"
+metadata/_edit_use_anchors_ = true
+
+[node name="password_input" type="LineEdit" parent="." unique_id=793976058]
+offset_left = 43.0
+offset_top = 102.0
+offset_right = 321.0
+offset_bottom = 133.0
+placeholder_text = "password"
+secret = true
+metadata/_edit_use_anchors_ = true
