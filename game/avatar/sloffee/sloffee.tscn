@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cwu4t1x1bdlia"]
 
-[ext_resource type="Texture2D" uid="uid://cahwxlm8r8v0j" path="res://assets/sloffee/idle_deep_breath.png" id="1_xpfeh"]
-[ext_resource type="Script" uid="uid://bhyopfehe7wpk" path="res://avatar/sloffee/sloffee.gd" id="2_68hke"]
+[ext_resource type="Texture2D" uid="uid://cahwxlm8r8v0j" path="res://game/assets/sloffee/idle_deep_breath.png" id="1_xpfeh"]
+[ext_resource type="Script" uid="uid://bhyopfehe7wpk" path="res://game/avatar/sloffee/sloffee.gd" id="2_68hke"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_80nbo"]
 atlas = ExtResource("1_xpfeh")

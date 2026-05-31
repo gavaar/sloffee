@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cahwxlm8r8v0j"
-path="res://.godot/imported/idle_deep_breath.png-ecffc8184d067396045a4bf97ba6d3f5.ctex"
+uid="uid://db742y1lo8nq0"
+path="res://.godot/imported/login_bg.png-241ec8078cc9339d98403c98c6de524b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sloffee/idle_deep_breath.png"
-dest_files=["res://.godot/imported/idle_deep_breath.png-ecffc8184d067396045a4bf97ba6d3f5.ctex"]
+source_file="res://game/assets/login_bg.png"
+dest_files=["res://.godot/imported/login_bg.png-241ec8078cc9339d98403c98c6de524b.ctex"]
 
 [params]
 

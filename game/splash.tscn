@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d4cd4vwim8iwp"]
+
+[ext_resource type="Texture2D" uid="uid://b416srlly3tu4" path="res://game/assets/splash.png" id="1_q4ns3"]
+
+[node name="splash" type="Node2D" unique_id=21896710]
+
+[node name="splash" type="Sprite2D" parent="." unique_id=764090765]
+position = Vector2(174, 320)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_q4ns3")
