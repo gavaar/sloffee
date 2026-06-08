@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dyv6e888t5idu"]
+
+[ext_resource type="Script" uid="uid://rviutxdymfx8" path="res://game/components/error_banner/error_banner.gd" id="1_01kku"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wwdy"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7490196, 0.16078432, 0.07058824, 0.8117647)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[node name="error_banner" type="Label" unique_id=13398537]
+visible = false
+z_index = 1
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 339.0
+offset_bottom = 51.0
+theme_type_variation = &"error"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_2wwdy")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_01kku")

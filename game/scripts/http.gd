@@ -15,11 +15,11 @@ func request(action: String, body: Dictionary, callback: Callable) -> void:
 		CONVEX_URL + action,
 		headers,
 		HTTPClient.METHOD_POST,
-		JSON.new().stringify(body),
+		JSON.stringify(body),
 	);
 
 	http.request_completed.connect(_handle_callback.bind(http, callback));
 
-func _handle_callback(result: int, code: int, headers: PackedStringArray, body: PackedByteArray, http: HTTPRequest, callback: Callable) -> void:
+func _handle_callback(_result: int, code: int, headers: PackedStringArray, body: PackedByteArray, http: HTTPRequest, callback: Callable) -> void:
 	http.queue_free();
-	Callable(callback).call({ "code": code, "body": JSON.new().parse_string(body.get_string_from_utf8()), "headers": headers });
+	Callable(callback).call({ "code": code, "body": JSON.parse_string(body.get_string_from_utf8()), "headers": headers });

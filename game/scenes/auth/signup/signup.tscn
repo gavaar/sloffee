@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://bwj3j1sgxd07c"]
+
+[ext_resource type="Script" uid="uid://guoh4jb5bxpd" path="res://game/scenes/auth/signup/signup.gd" id="1_s0kup"]
+[ext_resource type="PackedScene" uid="uid://deypw2kjk114l" path="res://game/components/input/input.tscn" id="2_x0y6o"]
+[ext_resource type="Texture2D" uid="uid://dd6hvi4ayg6vf" path="res://game/scenes/auth/signup/loading.png" id="3_3ng3j"]
+[ext_resource type="PackedScene" uid="uid://dyv6e888t5idu" path="res://game/components/error_banner/error_banner.tscn" id="4_6f0ka"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6f0ka"]
+atlas = ExtResource("3_3ng3j")
+region = Rect2(0, 0, 198, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4gga"]
+atlas = ExtResource("3_3ng3j")
+region = Rect2(198, 0, 198, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jryq6"]
+atlas = ExtResource("3_3ng3j")
+region = Rect2(396, 0, 198, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrq4w"]
+atlas = ExtResource("3_3ng3j")
+region = Rect2(594, 0, 198, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ouyo"]
+atlas = ExtResource("3_3ng3j")
+region = Rect2(0, 200, 198, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0nv7"]
+atlas = ExtResource("3_3ng3j")
+region = Rect2(198, 200, 198, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvgyr"]
+atlas = ExtResource("3_3ng3j")
+region = Rect2(396, 200, 198, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qte8u"]
+atlas = ExtResource("3_3ng3j")
+region = Rect2(594, 200, 198, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bru3o"]
+atlas = ExtResource("3_3ng3j")
+region = Rect2(0, 400, 198, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_618d6"]
+atlas = ExtResource("3_3ng3j")
+region = Rect2(198, 400, 198, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_baymn"]
+atlas = ExtResource("3_3ng3j")
+region = Rect2(396, 400, 198, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg7um"]
+atlas = ExtResource("3_3ng3j")
+region = Rect2(594, 400, 198, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7vfrk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6f0ka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4gga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jryq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrq4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ouyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0nv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvgyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qte8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bru3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_618d6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_baymn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg7um")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="signup" type="Node2D" unique_id=689147062]
+script = ExtResource("1_s0kup")
+
+[node name="username_input" parent="." unique_id=254778409 instance=ExtResource("2_x0y6o")]
+offset_left = 40.0
+offset_top = 77.0
+offset_right = 324.0
+offset_bottom = 119.0
+placeholder_text = "usuario"
+
+[node name="loading" type="AnimatedSprite2D" parent="username_input" unique_id=1252688262]
+visible = false
+position = Vector2(263.00003, 21)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_7vfrk")
+autoplay = "default"
+frame_progress = 0.52489406
+
+[node name="email_input" parent="." unique_id=1231929749 instance=ExtResource("2_x0y6o")]
+offset_left = 40.0
+offset_top = 147.0
+offset_right = 324.0
+offset_bottom = 189.0
+placeholder_text = "correo electrónico"
+editable = false
+
+[node name="password_input" parent="." unique_id=1674052014 instance=ExtResource("2_x0y6o")]
+offset_left = 40.0
+offset_top = 217.0
+offset_right = 324.0
+offset_bottom = 259.0
+placeholder_text = "contraseña"
+editable = false
+secret = true
+
+[node name="confirm_password_input" parent="." unique_id=636523966 instance=ExtResource("2_x0y6o")]
+offset_left = 40.0
+offset_top = 287.0
+offset_right = 324.0
+offset_bottom = 329.0
+placeholder_text = "repetir contraseña"
+editable = false
+secret = true
+
+[node name="create_button" type="Button" parent="." unique_id=1346585713]
+offset_left = 92.0
+offset_top = 377.0
+offset_right = 269.18353
+offset_bottom = 422.0
+disabled = true
+text = "Crear"
+
+[node name="error_banner" parent="." unique_id=13398537 instance=ExtResource("4_6f0ka")]
+offset_left = 13.0
+offset_top = 12.0
+offset_right = 347.0
+offset_bottom = 58.0
+
+[node name="back_button" type="LinkButton" parent="." unique_id=1325073996]
+offset_left = 303.0
+offset_top = 18.0
+offset_right = 343.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.4117647, 0.3019608, 0.20392157, 1)
+text = "back"
+underline = 1

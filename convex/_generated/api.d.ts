@@ -8,9 +8,15 @@
  * @module
  */
 
-import type * as auth_helpers from "../auth/helpers.js";
-import type * as auth_index from "../auth/index.js";
 import type * as http from "../http.js";
+import type * as routes_auth_helpers_generateToken from "../routes/auth/helpers/generateToken.js";
+import type * as routes_auth_helpers_hashPassword from "../routes/auth/helpers/hashPassword.js";
+import type * as routes_auth_helpers_index from "../routes/auth/helpers/index.js";
+import type * as routes_auth_index from "../routes/auth/index.js";
+import type * as routes_auth_login from "../routes/auth/login.js";
+import type * as routes_auth_signup from "../routes/auth/signup.js";
+import type * as routes_auth_verify from "../routes/auth/verify.js";
+import type * as routes_index from "../routes/index.js";
 import type * as sessions from "../sessions.js";
 import type * as users from "../users.js";
 
@@ -21,9 +27,15 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
-  "auth/helpers": typeof auth_helpers;
-  "auth/index": typeof auth_index;
   http: typeof http;
+  "routes/auth/helpers/generateToken": typeof routes_auth_helpers_generateToken;
+  "routes/auth/helpers/hashPassword": typeof routes_auth_helpers_hashPassword;
+  "routes/auth/helpers/index": typeof routes_auth_helpers_index;
+  "routes/auth/index": typeof routes_auth_index;
+  "routes/auth/login": typeof routes_auth_login;
+  "routes/auth/signup": typeof routes_auth_signup;
+  "routes/auth/verify": typeof routes_auth_verify;
+  "routes/index": typeof routes_index;
   sessions: typeof sessions;
   users: typeof users;
 }>;

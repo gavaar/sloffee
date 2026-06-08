@@ -1,11 +1,8 @@
 import { httpRouter } from 'convex/server';
-import { login, signUp, verify } from './auth';
+import { auth } from './routes';
 
 const router = httpRouter();
 
-// auth
-router.route(signUp);
-router.route(login);
-router.route(verify);
+auth(router);
 
 export default router;

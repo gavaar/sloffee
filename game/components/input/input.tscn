@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://deypw2kjk114l"]
+
+[ext_resource type="Script" uid="uid://bb1sglskh83s8" path="res://game/components/input/input.gd" id="1_gv0pn"]
+
+[node name="input" type="LineEdit" unique_id=254778409]
+offset_left = 1.0
+offset_right = 285.0
+offset_bottom = 42.0
+caret_blink = true
+icon_expand_mode = 1
+script = ExtResource("1_gv0pn")
+
+[node name="info_label" type="Label" parent="." unique_id=1408464041]
+visible = false
+layout_mode = 0
+offset_left = 7.0
+offset_top = 42.0
+offset_right = 156.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 12
+text = "error message for the lols"

@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://duhqmxgak4duo"]
+
+[ext_resource type="Script" uid="uid://4shp7180gxy7" path="res://game/scenes/auth/login/login.gd" id="1_d7qrr"]
+[ext_resource type="Texture2D" uid="uid://db742y1lo8nq0" path="res://game/assets/login_bg.png" id="2_1qgm1"]
+[ext_resource type="PackedScene" uid="uid://deypw2kjk114l" path="res://game/components/input/input.tscn" id="2_1vvd8"]
+[ext_resource type="Texture2D" uid="uid://bnp6u6y7g68uu" path="res://game/scenes/auth/login/assets/sloffee_logo.png" id="3_q2i05"]
+[ext_resource type="Texture2D" uid="uid://cu1p0mwq5l3sb" path="res://game/scenes/auth/login/assets/sloffee_with_cup.png" id="4_3kmrc"]
+[ext_resource type="Texture2D" uid="uid://7a5wxre3vsf1" path="res://game/scenes/auth/login/assets/plant.png" id="5_hq6t1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wwdy"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.3764706, 0.039215688, 0.078431375, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[node name="login" type="Node2D" unique_id=724414749]
+script = ExtResource("1_d7qrr")
+
+[node name="username_input" parent="." unique_id=254778409 instance=ExtResource("2_1vvd8")]
+offset_left = 40.0
+offset_top = 156.0
+offset_right = 324.0
+offset_bottom = 198.0
+placeholder_text = "usuario"
+
+[node name="username_input_old" type="LineEdit" parent="." unique_id=311398792]
+visible = false
+offset_left = 44.0
+offset_top = 186.0
+offset_right = 322.0
+offset_bottom = 217.0
+size_flags_vertical = 4
+placeholder_text = "usuario"
+metadata/_edit_use_anchors_ = true
+
+[node name="password_input" parent="." unique_id=1758689692 instance=ExtResource("2_1vvd8")]
+offset_left = 41.0
+offset_top = 229.0
+offset_right = 325.0
+offset_bottom = 271.0
+placeholder_text = "contraseña"
+
+[node name="password_input_old" type="LineEdit" parent="." unique_id=793976058]
+visible = false
+offset_left = 44.0
+offset_top = 239.0
+offset_right = 322.0
+offset_bottom = 274.0
+placeholder_text = "contraseña"
+secret = true
+metadata/_edit_use_anchors_ = true
+
+[node name="login_button" type="Button" parent="." unique_id=1309321134]
+offset_left = 58.0
+offset_top = 314.0
+offset_right = 302.0
+offset_bottom = 345.0
+text = "Iniciar sesión"
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="sign_up_label" type="Label" parent="." unique_id=91071253]
+offset_left = 66.0
+offset_top = 375.0
+offset_right = 212.0
+offset_bottom = 398.0
+text = "¿No tienes cuenta?"
+
+[node name="forgot_password_label" type="Label" parent="." unique_id=1403282328]
+offset_left = 84.0
+offset_top = 409.0
+offset_right = 283.0
+offset_bottom = 432.0
+theme_override_font_sizes/font_size = 14
+text = "¿Olvidaste tu contraseña?"
+
+[node name="sign_up_link" type="LinkButton" parent="." unique_id=405805295]
+anchors_preset = -1
+anchor_left = 0.15479594
+anchor_top = 2.3225806
+anchor_right = 0.15479594
+anchor_bottom = 2.3225806
+offset_left = 214.0
+offset_top = 375.0
+offset_right = 293.0
+offset_bottom = 415.0
+text = "Registrate"
+underline = 2
+
+[node name="assets" type="Node" parent="." unique_id=1707426798]
+
+[node name="sloffee_logo" type="Sprite2D" parent="assets" unique_id=1302890557]
+position = Vector2(182, 104)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_q2i05")
+
+[node name="sloffee_with_cup" type="Sprite2D" parent="assets" unique_id=379905537]
+position = Vector2(245, 486)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_3kmrc")
+
+[node name="plant" type="Sprite2D" parent="assets" unique_id=1004902097]
+position = Vector2(101, 526)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_hq6t1")
+
+[node name="login_bg" type="Sprite2D" parent="assets" unique_id=99055486]
+visible = false
+position = Vector2(181, 345)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_1qgm1")
+
+[node name="error_label" type="Label" parent="." unique_id=1155190008]
+z_index = 1
+offset_left = 13.0
+offset_top = 22.0
+offset_right = 347.0
+offset_bottom = 63.0
+theme_type_variation = &"error"
+theme_override_styles/normal = SubResource("StyleBoxFlat_2wwdy")
+text = "test text"
+horizontal_alignment = 1
+vertical_alignment = 1

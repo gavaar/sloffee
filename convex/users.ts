@@ -11,9 +11,19 @@ export const byUsername = query({
   },
 });
 
+export const byEmail = query({
+  args: { email: v.string() },
+  handler: async (ctx, { email }) => {
+    return await ctx.db
+      .query("users")
+      .withIndex("by_email", q => q.eq("email", email))
+      .first();
+  },
+});
+
 export const create = mutation({
-  args: { username: v.string(), passwordHash: v.string() },
-  handler: async (ctx, { username, passwordHash }) => {
-    return await ctx.db.insert("users", { username, passwordHash, createdAt: Date.now() });
+  args: { username: v.string(), email: v.string(), passwordHash: v.string() },
+  handler: async (ctx, { username, email, passwordHash }) => {
+    return await ctx.db.insert("users", { username, email, passwordHash, createdAt: Date.now() });
   },
 });
