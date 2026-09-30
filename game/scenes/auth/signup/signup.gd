@@ -25,6 +25,9 @@ func _ready() -> void:
 func _check_for_username(text: String) -> void:
 	username_valid = false;
 	username_input_loading.visible = true;
+	password_input.editable = false;
+	confirm_password_input.editable = false;
+	email_input.editable = false;
 
 	if throttler:
 		throttler.stop();
