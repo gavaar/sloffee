@@ -4,12 +4,14 @@ enum Route {
 	Login,
 	Signup,
 	Cafe,
+	Sweepdoku,
 }
 
 const ROUTES = {
 	login = "res://game/scenes/auth/login/login.tscn",
 	signup = "res://game/scenes/auth/signup/signup.tscn",
 	cafe = "res://game/scenes/cafe/cafe.tscn",
+	sweepdoku = "res://game/scenes/sweepdoku/sweepdoku.tscn",
 };
 
 func route_to(route: Route) -> void:
@@ -20,6 +22,8 @@ func route_to(route: Route) -> void:
 			get_tree().change_scene_to_file(ROUTES.signup);
 		Route.Cafe:
 			get_tree().change_scene_to_file(ROUTES.cafe);
+		Route.Sweepdoku:
+			get_tree().change_scene_to_file(ROUTES.sweepdoku);
 
 func _ready() -> void:
 	Auth.valid_token.connect(_on_token_validity);

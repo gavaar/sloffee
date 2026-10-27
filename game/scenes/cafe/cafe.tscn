@@ -2,8 +2,61 @@
 
 [ext_resource type="Texture2D" uid="uid://bv353seaftbbh" path="res://game/assets/bg.png" id="1_folyt"]
 [ext_resource type="PackedScene" uid="uid://cwu4t1x1bdlia" path="res://game/avatar/sloffee/sloffee.tscn" id="2_wmtxw"]
+[ext_resource type="Script" path="res://game/scenes/cafe/cafe.gd" id="3_script"]
+[ext_resource type="Script" path="res://game/components/safe_area/safe_area.gd" id="4_safe_area"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_circle"]
+expand_margin_left = -8.0
+expand_margin_top = -8.0
+expand_margin_right = -8.0
+expand_margin_bottom = -8.0
+bg_color = Color(0.32941177, 0.41568628, 0.20784314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2539661, 0.32409778, 0.1547296, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_circle_hover"]
+expand_margin_left = -8.0
+expand_margin_top = -8.0
+expand_margin_right = -8.0
+expand_margin_bottom = -8.0
+bg_color = Color(0.39172256, 0.49052715, 0.25322703, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2539661, 0.32409778, 0.1547296, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_circle_pressed"]
+expand_margin_left = -8.0
+expand_margin_top = -8.0
+expand_margin_right = -8.0
+expand_margin_bottom = -8.0
+bg_color = Color(0.4232824, 0.5280191, 0.27698225, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2539661, 0.32409778, 0.1547296, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
 
 [node name="cafe" type="Node2D" unique_id=1322120762]
+script = ExtResource("3_script")
 
 [node name="background" type="Sprite2D" parent="." unique_id=310552611]
 position = Vector2(-102, 321.00003)
@@ -13,3 +66,29 @@ texture = ExtResource("1_folyt")
 [node name="sloffee" parent="." unique_id=1246644334 instance=ExtResource("2_wmtxw")]
 position = Vector2(174, 432)
 scale = Vector2(4.5, 4.5)
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="safe_area" type="MarginContainer" parent="ui"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("4_safe_area")
+
+[node name="sweepdoku_button" type="Button" parent="ui/safe_area"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+tooltip_text = "Abrir Sweepdoku"
+accessibility_name = "Abrir Sweepdoku"
+theme_override_colors/font_focus_color = Color(0.8392157, 0.7176471, 0.6039216, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_circle")
+theme_override_styles/hover = SubResource("StyleBoxFlat_circle_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_circle_pressed")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_circle")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "S"
