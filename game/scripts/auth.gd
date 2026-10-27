@@ -7,7 +7,10 @@ signal valid_token(bool);
 
 func _ready() -> void:
 	token = get_token();
-	if token: _verify_token();
+	if token:
+		_verify_token();
+	else:
+		valid_token.emit.call_deferred(false);
 
 func _verify_token() -> void:
 	Http.request("auth/verify", { "token": token }, _on_token_verified);
